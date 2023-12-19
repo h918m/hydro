@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+@font-face {
+  font-family: "Moul";
+  src: url("./assets/fonts/Moul-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Moulpali";
+  src: url("./assets/fonts/Moulpali-Regular.ttf");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("./assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf");
+}
+
+.mat-step-icon-selected {
+  background-color: #148a92 !important;
+  color: white !important;
+}
+
+.mat-step-label-selected > .mat-step-text-label {
+  color: #148a92 !important;
+}
+.mat-step-icon-selected > .mat-step-icon-content {
+  color: white !important;
+}
+.mat-stepper-horizontal-line {
+  border-top-color: white !important;
+  border-top-width: 4px !important;
+}
+
+.mat-stepper-label-position-bottom
+  .mat-horizontal-stepper-header:not(:first-child)::before,
+[dir="rtl"]
+  .mat-stepper-label-position-bottom
+  .mat-horizontal-stepper-header:not(:last-child)::before,
+.mat-stepper-label-position-bottom
+  .mat-horizontal-stepper-header:not(:last-child)::after,
+[dir="rtl"]
+  .mat-stepper-label-position-bottom
+  .mat-horizontal-stepper-header:not(:first-child)::after {
+  border-top-color: white !important;
+  border-top-width: 4px !important;
+}
+
+.mat-step-icon:not(.mat-step-icon-selected) {
+  background-color: white !important;
+  color: rgb(51, 51, 51, 0.4) !important;
+}
+
+.mat-step-label {
+  color: rgba(251, 252, 252, 0.416) !important;
+}
+
+.mat-horizontal-content-container{
+  padding: 0 !important;
+}

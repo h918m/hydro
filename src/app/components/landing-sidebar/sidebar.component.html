@@ -1,0 +1,22 @@
+<div
+  class="flex fixed left-0 1xl:w-fit w-full 1xl:justify-start justify-between 1xl:top-[unset] top-[4rem] bg-[#E7F4F5] rounded-tr-[17.51px] rounded-br-[17.51px] flex-row 1xl:flex-col"
+>
+  <a
+    *ngFor="let nav of sidebar"
+    [routerLink]="[nav.link]"
+    [ngClass]="{
+      'border-b-4 border-[rgba(58,148,154,0.36)]':
+        nav.link !== sidebar[sidebar.length - 1].link,
+      '1xl:rounded-tr-[17.51px]': nav.link === sidebar[0].link,
+      '1xl:rounded-br-[17.51px]': nav.link === sidebar[sidebar.length - 1].link,
+      'bg-[#62CCD3]': href === nav.link
+    }"
+    class="flex hover:bg-[#62CCD3] px-5 cursor-pointer py-[6px] items-center flex-col gap-3"
+  >
+    <img src="../../../assets/icons/homeSideIcon.svg" alt="Home Icon" />
+    <span
+      class="text-[10px] max-w-[6rem] text-center font-[Montserrat] font-extrabold"
+      >{{ nav.title }}</span
+    >
+  </a>
+</div>
