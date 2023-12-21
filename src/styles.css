@@ -27,6 +27,21 @@
   src: url("./assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf");
 }
 
+@font-face {
+  font-family: "AbrilFatface";
+  src: url("./assets/fonts/AbrilFatface-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Adamina";
+  src: url("./assets/fonts/Adamina-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Acme";
+  src: url("./assets/fonts/Acme-Regular.ttf");
+}
+
 .mat-step-icon-selected {
   background-color: #148a92 !important;
   color: white !important;
@@ -66,6 +81,36 @@
   color: rgba(251, 252, 252, 0.416) !important;
 }
 
-.mat-horizontal-content-container{
+.mat-horizontal-content-container {
   padding: 0 !important;
+}
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline .mdc-notched-outline__trailing {
+  border-left-width: 0px !important;
+}
+
+.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field .mdc-notched-outline__notch{
+  border-right-width: 0px !important;
+}
+
+.mdc-form-field{ 
+  align-items: start !important;
+  width: 100%;
+}
+
+label {
+  width: 100% !important;
+}
+
+.sidebar-shadow {
+  box-shadow: 4px 4px 2px 0px rgba(57,182,204,0.75);
+  z-index: 10;
+}
+
+.mat-step-header {
+  flex: 1;
+  min-width: 220px;
+}
+
+.mat-horizontal-stepper-wrapper {
+  text-align: -webkit-center;
 }

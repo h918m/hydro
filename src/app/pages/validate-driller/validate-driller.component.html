@@ -1,7 +1,7 @@
 <div class="1xl:pt-3">
   <landing-navbar></landing-navbar>
   <div
-    class="flex mt-5 1xl:pt-0 pt-[7rem] flex-col relative justify-center items-center bg-fixed bg-[url('/assets/images/homeImage.png')] pb-[5rem] px-3 min-h-[calc(100vh-6rem)] bg-no-repeat bg-cover"
+    class="flex mt-5 pt-0 flex-col relative justify-center items-center bg-fixed bg-[url('/assets/images/homeImage.png')] pb-[5rem] px-3 min-h-[calc(100vh-6rem)] bg-no-repeat bg-cover"
   >
     <landing-sidebar></landing-sidebar>
     <div
@@ -11,7 +11,7 @@
       <span class="text-[#19B6D1] font-bold font-[Moul]">Lagos State</span>
     </div>
     <div
-      class="max-w-[65rem] font-[Montserrat] text-center font-[1000] text-[18px] 1xl:text-[24px] text-white"
+      class="max-w-[50rem] lg:max-w-[65rem] font-[Montserrat] text-center font-[1000] text-[18px] 1xl:text-[24px] text-white"
     >
       Lagos State Water Regulation Commission (LSWRC) has mandated that all
       Borehole drilling must be carried out by certified Drillers.
@@ -31,7 +31,7 @@
           </div>
           <div class="flex items-center gap-2">
             <div *ngFor="let drill_type of drill_types">
-              <div
+              <button
                 [className]="
                   drill_type === drill_types[0]
                     ? 'text-[#082227] text-[14.53px] font-extrabold border-b-[3.63px] border-[#63CCD3]'
@@ -39,7 +39,7 @@
                 "
               >
                 {{ drill_type }}
-              </div>
+              </button>
             </div>
           </div>
         </div>
@@ -73,7 +73,7 @@
             class="border-none w-[20rem] outline-none px-4 py-1"
           />
           <a
-            [routerLink]="'search'"
+            [routerLink]="'search-result'"
             class="flex items-center gap-4 pl-4 pr-6 py-1 bg-[#63CCD3] rounded-full text-white font-bold"
           >
             <img src="/assets/icons/search.svg" alt="" class="w-5 h-5" />
