@@ -21,6 +21,7 @@
         *ngFor="let slide of licenses; let slideIndex = index"
         class="dot"
         (click)="goTo(slideIndex)"
+        [ngClass]="{ 'active-dot': currentIndex === slideIndex }"
       >
         ●
       </div>
