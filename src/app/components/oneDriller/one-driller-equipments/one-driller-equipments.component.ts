@@ -1,73 +1,32 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-one-driller-equipments',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   template: `
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5 p-4">
       <div class="bg-white p-4 rounded-lg">
-        <p class="text-center font-bold text-[32px] text-[#0CB9DE] my-2">
-          APCOM Mouted -Truck Coring Drill Rig
+        <p class="text-center font-bold text-[25px] text-[#0CB9DE] my-2">
+          {{ equipments[activeEquip].title }}
         </p>
         <div class="grid grid-cols-4 gap-2">
-          <div class="bg-white ">
-            <img src="../../../assets/images/equip1.png" alt="w-full" />
-          </div>
-          <div class="bg-white ">
-            <img src="../../../assets/images/equip2.png" alt="w-full" />
-          </div>
-          <div class="bg-white ">
-            <img src="../../../assets/images/equip3.png" alt="w-full" />
-          </div>
-          <div class="bg-white ">
-            <img src="../../../assets/images/equip4.png" alt="w-full" />
+          <div
+            class="bg-white "
+            *ngFor="let img of equipments[activeEquip].images"
+          >
+            <img [src]="img" class="w-full" />
           </div>
         </div>
         <p class="text-[#121212] text-[20px]">
-          <span class="text-[24px] font-bold">Status</span> Functional
+          <span class="text-[24px] font-bold">Status</span>
+          {{ equipments[activeEquip].status }}
         </p>
         <p class="text-[#121212]">
           <span class="text-[24px] font-bold">Description</span>
         </p>
-        <p class="text-[#121212] ">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
-          tenetur accusantium dignissimos id eos nemo eaque praesentium
-          deserunt, nihil voluptas, laborum dolorem quo animi asperiores nobis
-          corporis ipsam pariatur mollitia. Nihil, soluta? Ullam tenetur esse
-          nulla odio temporibus, adipisci consequatur ratione ducimus quisquam a
-          nostrum officiis animi, dignissimos error delectus quibusdam
-          repellendus tempore commodi aliquid porro nesciunt possimus,
-          exercitationem officia? Esse quibusdam quia distinctio, aliquid optio
-          quaerat nostrum blanditiis! Aspernatur fugiat, nemo eius repudiandae
-          dicta sit sapiente aut iure quaerat accusamus nisi voluptatem aperiam
-          doloribus esse reprehenderit! Laboriosam, placeat modi! Aspernatur,
-          perferendis? Neque nisi alias enim voluptates, temporibus minus
-          exercitationem explicabo quidem autem ex, nobis dolorum assumenda aut
-          cupiditate, accusantium nam excepturi sit nulla repudiandae. Molestias
-          sequi totam tempore voluptatem! Necessitatibus saepe exercitationem
-          commodi id obcaecati expedita facilis provident vel illo aspernatur
-          dolorum, atque iusto laboriosam a quia fugit quisquam vero corporis
-          enim nobis, temporibus sint hic! Iure, odio praesentium. Sequi
-          provident deserunt ipsum saepe optio! Tempore sed nobis, culpa
-          officiis, sint eveniet, maiores voluptatem non dolore est ex iusto
-          pariatur iure commodi recusandae sapiente totam quas explicabo cumque.
-          Quas! Dolorum minus quaerat omnis, laudantium perspiciatis, incidunt
-          praesentium eius possimus voluptatum quasi facilis voluptatem!
-          Aliquid, harum. Pariatur, doloremque. A, sit quis non cum ea quasi
-          impedit blanditiis ab similique temporibus! Quisquam, recusandae
-          delectus. Ipsa aperiam quidem culpa placeat nesciunt itaque. Similique
-          nemo libero consequuntur rerum quidem nulla quia aliquid animi eius,
-          fugiat illum praesentium ratione provident numquam dolorem nobis
-          corporis! Rem nesciunt est reiciendis unde praesentium in aperiam
-          reprehenderit quasi accusamus, odit voluptate aspernatur asperiores
-          libero labore quod? A voluptas facere accusantium totam enim nam
-          reprehenderit at consectetur, eius quaerat. Corporis, quidem
-          consequuntur unde, animi eaque similique assumenda numquam dolore
-          cupiditate expedita voluptate iure delectus quisquam id, ipsum saepe
-          eum officia? Impedit est sapiente repellendus voluptatibus vel quam,
-          praesentium aperiam.
-        </p>
+        <p class="text-[#121212] ">{{ equipments[activeEquip].description }}</p>
       </div>
       <div>
         <div
@@ -168,6 +127,8 @@ import { Component } from '@angular/core';
           </div>
         </div>
         <div class="bg-white p-4 rounded-lg mt-4">
+          <p class="font-bold">Equipments’ List</p>
+
           <div
             class="flex  flex-col sm:flex-row justify-center gap-4 sm:gap-10 items-center"
           >
@@ -313,4 +274,115 @@ import { Component } from '@angular/core';
     </div>
   `,
 })
-export class OneDrillerEquipmentsComponent {}
+export class OneDrillerEquipmentsComponent {
+  activeEquip = 0;
+  equipments = [
+    {
+      title: 'APCOM Mouted -Truck Coring Drill Rig',
+      ticked: true,
+      images: [
+        '../../../assets/images/equip1.png',
+        '../../../assets/images/equip2.png',
+        '../../../assets/images/equip3.png',
+        '../../../assets/images/equip4.png',
+      ],
+      status: 'Functional',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,tenetur accusantium dignissimos id eos nemo eaque praesentiumdeserunt, nihil voluptas, laborum dolorem quo animi asperiores nobiscorporis ipsam pariatur mollitia. Nihil, soluta? Ullam tenetur essenulla odio temporibus, adipisci consequatur ratione ducimus quisquam anostrum officiis animi, dignissimos error delectus quibusdamrepellendus tempore commodi aliquid porro nesciunt possimus,exercitationem officia? Esse quibusdam quia distinctio, aliquid optio',
+    },
+    {
+      title: 'APCOM rotary water well drill',
+      ticked: false,
+      images: [
+        '../../../assets/images/equip3.png',
+        '../../../assets/images/equip4.png',
+        '../../../assets/images/equip1.png',
+        '../../../assets/images/equip2.png',
+      ],
+      status: 'Non Functional',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,tenetur accusantium dignissimos id eos nemo eaque praesentiumdeserunt, nihil voluptas, laborum dolorem quo animi asperiores nobiscorporis ipsam pariatur mollitia. Nihil, soluta? Ullam tenetur essenulla odio temporibus, adipisci consequatur ratione ducimus quisquam anostrum officiis animi, dignissimos error delectus quibusdamrepellendus tempore commodi aliquid porro nesciunt possimus,exercitationem officia? Esse quibusdam quia distinctio, aliquid optio',
+    },
+    {
+      title: 'APCOM Mouted -Truck Coring Drill Rig',
+      ticked: true,
+      images: [
+        '../../../assets/images/equip1.png',
+        '../../../assets/images/equip2.png',
+        '../../../assets/images/equip3.png',
+        '../../../assets/images/equip4.png',
+      ],
+      status: 'Functional',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,tenetur accusantium dignissimos id eos nemo eaque praesentiumdeserunt, nihil voluptas, laborum dolorem quo animi asperiores nobiscorporis ipsam pariatur mollitia. Nihil, soluta? Ullam tenetur essenulla odio temporibus, adipisci consequatur ratione ducimus quisquam anostrum officiis animi, dignissimos error delectus quibusdamrepellendus tempore commodi aliquid porro nesciunt possimus,exercitationem officia? Esse quibusdam quia distinctio, aliquid optio',
+    },
+    {
+      title: 'APCOM rotary water well drill',
+      ticked: false,
+      images: [
+        '../../../assets/images/equip3.png',
+        '../../../assets/images/equip4.png',
+        '../../../assets/images/equip1.png',
+        '../../../assets/images/equip2.png',
+      ],
+      status: 'Non Functional',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,tenetur accusantium dignissimos id eos nemo eaque praesentiumdeserunt, nihil voluptas, laborum dolorem quo animi asperiores nobiscorporis ipsam pariatur mollitia. Nihil, soluta? Ullam tenetur essenulla odio temporibus, adipisci consequatur ratione ducimus quisquam anostrum officiis animi, dignissimos error delectus quibusdamrepellendus tempore commodi aliquid porro nesciunt possimus,exercitationem officia? Esse quibusdam quia distinctio, aliquid optio',
+    },
+    {
+      title: 'APCOM Mouted -Truck Coring Drill Rig',
+      ticked: true,
+      images: [
+        '../../../assets/images/equip1.png',
+        '../../../assets/images/equip2.png',
+        '../../../assets/images/equip3.png',
+        '../../../assets/images/equip4.png',
+      ],
+      status: 'Functional',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,tenetur accusantium dignissimos id eos nemo eaque praesentiumdeserunt, nihil voluptas, laborum dolorem quo animi asperiores nobiscorporis ipsam pariatur mollitia. Nihil, soluta? Ullam tenetur essenulla odio temporibus, adipisci consequatur ratione ducimus quisquam anostrum officiis animi, dignissimos error delectus quibusdamrepellendus tempore commodi aliquid porro nesciunt possimus,exercitationem officia? Esse quibusdam quia distinctio, aliquid optio',
+    },
+    {
+      title: 'APCOM rotary water well drill',
+      ticked: false,
+      images: [
+        '../../../assets/images/equip3.png',
+        '../../../assets/images/equip4.png',
+        '../../../assets/images/equip1.png',
+        '../../../assets/images/equip2.png',
+      ],
+      status: 'Non Functional',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,tenetur accusantium dignissimos id eos nemo eaque praesentiumdeserunt, nihil voluptas, laborum dolorem quo animi asperiores nobiscorporis ipsam pariatur mollitia. Nihil, soluta? Ullam tenetur essenulla odio temporibus, adipisci consequatur ratione ducimus quisquam anostrum officiis animi, dignissimos error delectus quibusdamrepellendus tempore commodi aliquid porro nesciunt possimus,exercitationem officia? Esse quibusdam quia distinctio, aliquid optio',
+    },
+    {
+      title: 'APCOM Mouted -Truck Coring Drill Rig',
+      ticked: true,
+      images: [
+        '../../../assets/images/equip1.png',
+        '../../../assets/images/equip2.png',
+        '../../../assets/images/equip3.png',
+        '../../../assets/images/equip4.png',
+      ],
+      status: 'Functional',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,tenetur accusantium dignissimos id eos nemo eaque praesentiumdeserunt, nihil voluptas, laborum dolorem quo animi asperiores nobiscorporis ipsam pariatur mollitia. Nihil, soluta? Ullam tenetur essenulla odio temporibus, adipisci consequatur ratione ducimus quisquam anostrum officiis animi, dignissimos error delectus quibusdamrepellendus tempore commodi aliquid porro nesciunt possimus,exercitationem officia? Esse quibusdam quia distinctio, aliquid optio',
+    },
+    {
+      title: 'APCOM rotary water well drill',
+      ticked: false,
+      images: [
+        '../../../assets/images/equip3.png',
+        '../../../assets/images/equip4.png',
+        '../../../assets/images/equip1.png',
+        '../../../assets/images/equip2.png',
+      ],
+      status: 'Non Functional',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,tenetur accusantium dignissimos id eos nemo eaque praesentiumdeserunt, nihil voluptas, laborum dolorem quo animi asperiores nobiscorporis ipsam pariatur mollitia. Nihil, soluta? Ullam tenetur essenulla odio temporibus, adipisci consequatur ratione ducimus quisquam anostrum officiis animi, dignissimos error delectus quibusdamrepellendus tempore commodi aliquid porro nesciunt possimus,exercitationem officia? Esse quibusdam quia distinctio, aliquid optio',
+    },
+  ];
+  goToEquip(index: number) {
+    this.activeEquip = index;
+  }
+}
