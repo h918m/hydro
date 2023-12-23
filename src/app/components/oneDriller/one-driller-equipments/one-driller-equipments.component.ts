@@ -8,23 +8,29 @@ import { Component } from '@angular/core';
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5 p-4">
       <div class="bg-white p-4 rounded-lg">
         <p class="text-center font-bold text-[32px] text-[#0CB9DE] my-2">
-          Company Profile
+          APCOM Mouted -Truck Coring Drill Rig
         </p>
         <div class="grid grid-cols-4 gap-2">
-          <div class="bg-white rounded-md shadow-md border">
+          <div class="bg-white ">
             <img src="../../../assets/images/equip1.png" alt="w-full" />
           </div>
-          <div class="bg-white rounded-md shadow-md border">
+          <div class="bg-white ">
             <img src="../../../assets/images/equip2.png" alt="w-full" />
           </div>
-          <div class="bg-white rounded-md shadow-md border">
+          <div class="bg-white ">
             <img src="../../../assets/images/equip3.png" alt="w-full" />
           </div>
-          <div class="bg-white rounded-md shadow-md border">
+          <div class="bg-white ">
             <img src="../../../assets/images/equip4.png" alt="w-full" />
           </div>
         </div>
-        <p class="text-[#121212] mt-5">
+        <p class="text-[#121212] text-[20px]">
+          <span class="text-[24px] font-bold">Status</span> Functional
+        </p>
+        <p class="text-[#121212]">
+          <span class="text-[24px] font-bold">Description</span>
+        </p>
+        <p class="text-[#121212] ">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
           tenetur accusantium dignissimos id eos nemo eaque praesentium
           deserunt, nihil voluptas, laborum dolorem quo animi asperiores nobis
