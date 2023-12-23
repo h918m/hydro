@@ -114,3 +114,7 @@ label {
 .mat-horizontal-stepper-wrapper {
   text-align: -webkit-center;
 }
+
+.search-location .mat-mdc-select-placeholder, .search-location .mat-mdc-select-arrow {
+  color: #0CB9DE !important;
+}
