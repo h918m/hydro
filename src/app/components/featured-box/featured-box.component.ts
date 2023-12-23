@@ -7,6 +7,7 @@ import { RouterLink } from '@angular/router';
   selector: 'app-featured-box',
   standalone: true,
   imports: [CommonModule, RouterLink],
+  // templateUrl:'./featured-box.component.html',
   template: `
     <a [routerLink]="'/driller/fafsdfasdfasdfdsafd'">
       <div class="bg-white p-2 shadow-sm rounded-md text-black ">

@@ -34,6 +34,16 @@ import { FeaturedCarouselComponent } from '../../components/featured-carousel/fe
 })
 export class SearchResultComponent {
   displayWay: 'grid' | 'list';
+  filterOpen: boolean = false;
+
+  openFilter() {
+    this.filterOpen = true;
+  }
+  closeFilter() {
+    if (this.filterOpen == true) {
+      this.filterOpen = false;
+    }
+  }
   constructor() {
     this.displayWay = 'list';
   }
