@@ -1,4 +1,7 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { FeaturedBoxComponent } from '../featured-box/featured-box.component';
+import { DrillerLicenseProps } from '../../interfaces/driller-license-props';
 
 interface Slide {
   url: string;
@@ -8,32 +11,34 @@ interface Slide {
 @Component({
   selector: 'app-featured-carousel',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, FeaturedBoxComponent],
   templateUrl: './featured-carousel.component.html',
   styleUrl: './featured-carousel.component.css',
 })
 export class FeaturedCarouselComponent {
-  @Input() slides!: Slide[];
+  @Input() licenses!: DrillerLicenseProps[];
   currentIndex: number = 0;
-  getCurrentSlideUrl() {
-    return `url('${this.slides[this.currentIndex].url}')`;
+  getCurrent() {
+    return this.licenses[this.currentIndex];
+  }
+  getThird() {
+    return this.licenses[this.currentIndex + 2];
+  }
+  getSecond() {
+    return this.licenses[this.currentIndex + 1];
   }
   goToPrevious(): void {
-    const isFirstSlide = this.currentIndex === 0;
-    const newIndex = isFirstSlide
-      ? this.slides.length - 1
-      : this.currentIndex - 1;
-  
+    const isFirst = this.currentIndex === 0;
+    const newIndex = isFirst ? this.licenses.length - 1 : this.currentIndex - 1;
     this.currentIndex = newIndex;
   }
-  
+
   goToNext(): void {
-    const isLastSlide = this.currentIndex === this.slides.length - 1;
+    const isLastSlide = this.currentIndex === this.licenses.length - 1;
     const newIndex = isLastSlide ? 0 : this.currentIndex + 1;
-  
     this.currentIndex = newIndex;
   }
-  goToSlide(slideIndex: number): void {
+  goTo(slideIndex: number): void {
     this.currentIndex = slideIndex;
   }
 }

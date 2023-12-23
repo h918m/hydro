@@ -11,6 +11,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatSelectModule } from '@angular/material/select';
 import { DrillerLicenseListComponent } from '../../components/driller-license-list/driller-license-list.component';
 import { ILocation } from '../../types/location';
+import { FeaturedCarouselComponent } from '../../components/featured-carousel/featured-carousel.component';
 // import { getLocationList } from '../../api/locations';
 
 @Component({
@@ -26,7 +27,8 @@ import { ILocation } from '../../types/location';
     RouterLink,
     MatIconModule,
     MatStepperModule,
-    MatSelectModule
+    MatSelectModule,
+    FeaturedCarouselComponent,
   ],
   templateUrl: './search-result.component.html',
 })
@@ -38,6 +40,44 @@ export class SearchResultComponent {
   changeDisplayWay(way: 'grid' | 'list') {
     this.displayWay = way;
   }
+
+  slides = [
+    {
+      image: '../../../assets/images/licenseImage.png',
+      title: 'License 1',
+      levels: [60, 70, 20, 40],
+      subtitle: 'Subtitle 1',
+      body: 'Description of License 1. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      image: '../../../assets/images/licenseImage.png',
+      title: 'License 2',
+      levels: [80, 50, 30, 60],
+      subtitle: 'Subtitle 2',
+      body: 'Description of License 2. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      image: '../../../assets/images/licenseImage.png',
+      title: 'License 3',
+      levels: [40, 60, 80, 20],
+      subtitle: 'Subtitle 3',
+      body: 'Description of License 3. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      image: '../../../assets/images/licenseImage.png',
+      title: 'License 4',
+      levels: [90, 30, 50, 70],
+      subtitle: 'Subtitle 4',
+      body: 'Description of License 4. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      image: '../../../assets/images/licenseImage.png',
+      title: 'License 5',
+      levels: [50, 80, 40, 90],
+      subtitle: 'Subtitle 5',
+      body: 'Description of License 5. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+  ];
 
   locations: ILocation[] = [];
   fetchLocations() {
