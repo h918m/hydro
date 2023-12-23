@@ -10,11 +10,13 @@ import { RouterLink } from '@angular/router';
   template: `
     <a [routerLink]="'/driller/fafsdfasdfasdfdsafd'">
       <div class="bg-white p-2 shadow-sm rounded-md text-black ">
-        <div class="flex justify-between items-center gap-3">
+        <div
+          class="flex flex-col lg:flex-row justify-between items-center gap-3"
+        >
           <img
             [src]="oneChoice.image"
             [alt]="oneChoice.title"
-            class="w-[50%]"
+            class="w-full lg:w-[50%]"
           />
           <div class="w-full">
             <p class=" font-bold text-[#043924] my-2 text-center">

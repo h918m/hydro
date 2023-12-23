@@ -1,14 +1,14 @@
 <div class="slider">
-  <div class="slide grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+  <div class="slide grid sm:grid-cols-1 md:grid-cols-2">
     <div>
       <app-featured-box [oneChoice]="getCurrent()" />
     </div>
     <div class="hidden md:block">
       <app-featured-box [oneChoice]="getSecond()" />
     </div>
-    <div class="hidden lg:block">
+    <!-- <div class="hidden lg:block">
       <app-featured-box [oneChoice]="getThird()" />
-    </div>
+    </div> -->
   </div>
   <div
     class="bg-white rounded-md p-4 border shadow-sm my-2 flex justify-between"
