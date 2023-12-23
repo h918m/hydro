@@ -42,11 +42,11 @@
 .dot {
   margin: 0 3px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 15px;
   color: #e7f4f5;
 }
 
 .active-dot {
   color: #0cb9de;
-  font-size: 30px;
+  font-size: 25px;
 }
