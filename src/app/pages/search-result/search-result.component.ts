@@ -37,6 +37,7 @@ export class SearchResultComponent {
   filterOpen: boolean = false;
 
   openFilter() {
+    console.log('Opened');
     this.filterOpen = true;
   }
   closeFilter() {

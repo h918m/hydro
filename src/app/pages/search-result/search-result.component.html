@@ -1,4 +1,4 @@
-<div (click)="closeFilter()">
+<div>
   <div class="bg-[#E7F4F5]">
     <div class="bg-white rounded-md p-4 border shadow-sm m-2">
       <div class="px-10 py-2 bg-[#E7F4F5] w-fit rounded-md">
@@ -36,7 +36,10 @@
       <p class="text-base">Results Found</p>
     </div>
     <div class="bg-white rounded-md p-4 border shadow-sm m-2 relative">
-      <div *ngIf="filterOpen === true" class="h-[300px] bg-red-500">
+      <div
+        *ngIf="filterOpen === true"
+        class="absolute top-0 left-0 h-[300px] bg-red-500"
+      >
         fasdjfjaslkdjflkasd
       </div>
 
@@ -132,7 +135,7 @@
           </div>
         </ng-template>
       </div>
-      <div class="grid sm:hidden grid-cols-1 gap-2">
+      <div class="grid sm:hidden grid-cols-1 gap-2" (click)="closeFilter()">
         <app-driller-license-list
           *ngFor="let choi of licenseBoxList"
           [oneChoice]="choi"
