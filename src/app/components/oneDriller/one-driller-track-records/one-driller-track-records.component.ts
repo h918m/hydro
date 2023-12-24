@@ -18,14 +18,46 @@ import { Component } from '@angular/core';
           <div
             [ngClass]="{
               absolute: true,
+              'bottom-[170%]': i % 2 !== 0,
+              'top-[170%]': i % 2 === 0
+            }"
+            class=" w-[150px]  left-1/2 transform translate-x-1/2"
+          >
+            <div *ngIf="i % 2 === 0; else up">
+              <img
+                [src]="
+                  i % 2 === 0
+                    ? '../../../assets/icons/downTrack.svg'
+                    : '../../../assets/icons/upTrack.svg'
+                "
+              />
+              <p class="text-[#0CB9DE]">{{ year.title }}</p>
+              <p class="text-black font-normal">{{ year.body }}</p>
+            </div>
+          </div>
+          <ng-template #up>
+            <div>
+              <p class="text-[#0CB9DE]">{{ year.title }}</p>
+              <p class="text-black font-normal">{{ year.body }}</p>
+              <img
+                [src]="
+                  i % 2 === 0
+                    ? '../../../assets/icons/downTrack.svg'
+                    : '../../../assets/icons/upTrack.svg'
+                "
+              />
+            </div>
+          </ng-template>
+          <!-- <div
+            [ngClass]="{
+              absolute: true,
               'bottom-[250%]': i % 2 !== 0,
               'top-[250%]': i % 2 === 0
             }"
-            class=" w-[150px] left-1/2 transform translate-x-1/2"
+            class="text-center  w-[150px] left-1/2 transform translate-x-1/2"
           >
-            <p class="text-[#0CB9DE]">{{ year.title }}</p>
-            <p class="text-black">{{ year.body }}</p>
-          </div>
+            
+          </div> -->
         </div>
       </div>
     </div>

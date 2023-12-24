@@ -22,7 +22,7 @@ import { OneDrillerEquipmentsComponent } from '../../components/oneDriller/one-d
   templateUrl: "one-driller.component.html",
 })
 export class OneDrillerComponent {
-  activeTab = 0;
+  activeTab = 1;
   changeActive(tab: number) {
     this.activeTab = tab;
   }
