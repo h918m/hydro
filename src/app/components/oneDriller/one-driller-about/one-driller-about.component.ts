@@ -23,20 +23,24 @@ import { CommonModule } from '@angular/common';
           <div
             class="flex flex-col gap-1 items-center bg-white p-3 rounded-md shadow-md border font-semibold"
           >
-            <p class="text-sm text-[#121212] text-center">Projects Completed</p>
-            <p class="text-xl  text-[#0CB9DE] text-center">123</p>
+            <p class="text-sm text-[#121212] text-center">Projects in Queue</p>
+            <p class="text-xl  text-[#0CB9DE] text-center">12</p>
           </div>
           <div
             class="flex flex-col gap-1 items-center bg-white p-3 rounded-md shadow-md border font-semibold"
           >
-            <p class="text-sm text-[#121212] text-center">Projects Completed</p>
-            <p class="text-xl  text-[#0CB9DE] text-center">123</p>
+            <p class="text-sm text-[#121212] text-center">
+              Average Project Duration
+            </p>
+            <p class="text-xl  text-[#0CB9DE] text-center">2 Days</p>
           </div>
           <div
             class="flex flex-col gap-1 items-center bg-white p-3 rounded-md shadow-md border font-semibold"
           >
-            <p class="text-sm text-[#121212] text-center">Projects Completed</p>
-            <p class="text-xl  text-[#0CB9DE] text-center">123</p>
+            <p class="text-sm text-[#121212] text-center">
+              Average Project Cost
+            </p>
+            <p class="text-xl  text-[#0CB9DE] text-center">$123</p>
           </div>
         </div>
         <p class="text-[#121212] mt-5">
@@ -177,7 +181,9 @@ import { CommonModule } from '@angular/common';
           </div>
         </div>
         <div class="bg-white p-4 rounded-lg mt-4">
-          <div class="flex  flex-col sm:flex-row justify-center gap-4 sm:gap-10 items-center">
+          <div
+            class="flex  flex-col sm:flex-row justify-center gap-4 sm:gap-10 items-center"
+          >
             <div class=" p-3 text-center">
               <div class="flex gap-2  justify-center items-center">
                 <p class="text-[#0CB9DE] text-6xl font-bold">5</p>
@@ -187,42 +193,122 @@ import { CommonModule } from '@angular/common';
                 </div>
               </div>
               <div class="flex gap-2 justify-center items-center">
-                <img src="../../../assets/icons/star.svg" alt="" class="w-5 h-5" />
-                <img src="../../../assets/icons/star.svg" alt="" class="w-5 h-5" />
-                <img src="../../../assets/icons/star.svg" alt="" class="w-5 h-5" />
-                <img src="../../../assets/icons/star.svg" alt="" class="w-5 h-5" />
-                <img src="../../../assets/icons/star.svg" alt="" class="w-5 h-5" />
+                <img
+                  src="../../../assets/icons/star.svg"
+                  alt=""
+                  class="w-5 h-5"
+                />
+                <img
+                  src="../../../assets/icons/star.svg"
+                  alt=""
+                  class="w-5 h-5"
+                />
+                <img
+                  src="../../../assets/icons/star.svg"
+                  alt=""
+                  class="w-5 h-5"
+                />
+                <img
+                  src="../../../assets/icons/star.svg"
+                  alt=""
+                  class="w-5 h-5"
+                />
+                <img
+                  src="../../../assets/icons/star.svg"
+                  alt=""
+                  class="w-5 h-5"
+                />
               </div>
             </div>
             <div>
               <div class="flex items-center gap-2 my-1">
                 <p class="text-[#596574] text-sm">Agent rating</p>
                 <div class="flex gap-2">
-                  <img src="../../../assets/icons/star.svg" alt="" class="w-5 h-5" />
-                  <img src="../../../assets/icons/star.svg" alt="" class="w-5 h-5" />
-                  <img src="../../../assets/icons/star.svg" alt="" class="w-5 h-5" />
-                  <img src="../../../assets/icons/star.svg" alt="" class="w-5 h-5" />
-                  <img src="../../../assets/icons/star.svg" alt="" class="w-5 h-5" />
+                  <img
+                    src="../../../assets/icons/star.svg"
+                    alt=""
+                    class="w-5 h-5"
+                  />
+                  <img
+                    src="../../../assets/icons/star.svg"
+                    alt=""
+                    class="w-5 h-5"
+                  />
+                  <img
+                    src="../../../assets/icons/star.svg"
+                    alt=""
+                    class="w-5 h-5"
+                  />
+                  <img
+                    src="../../../assets/icons/star.svg"
+                    alt=""
+                    class="w-5 h-5"
+                  />
+                  <img
+                    src="../../../assets/icons/star.svg"
+                    alt=""
+                    class="w-5 h-5"
+                  />
                 </div>
               </div>
               <div class="flex items-center gap-2 my-1">
                 <p class="text-[#596574] text-sm">Landlord rating</p>
                 <div class="flex gap-2">
-                  <img src="../../../assets/icons/star.svg" alt="" class="w-5 h-5" />
-                  <img src="../../../assets/icons/star.svg" alt="" class="w-5 h-5" />
-                  <img src="../../../assets/icons/star.svg" alt="" class="w-5 h-5" />
-                  <img src="../../../assets/icons/star.svg" alt="" class="w-5 h-5" />
-                  <img src="../../../assets/icons/star.svg" alt="" class="w-5 h-5" />
+                  <img
+                    src="../../../assets/icons/star.svg"
+                    alt=""
+                    class="w-5 h-5"
+                  />
+                  <img
+                    src="../../../assets/icons/star.svg"
+                    alt=""
+                    class="w-5 h-5"
+                  />
+                  <img
+                    src="../../../assets/icons/star.svg"
+                    alt=""
+                    class="w-5 h-5"
+                  />
+                  <img
+                    src="../../../assets/icons/star.svg"
+                    alt=""
+                    class="w-5 h-5"
+                  />
+                  <img
+                    src="../../../assets/icons/star.svg"
+                    alt=""
+                    class="w-5 h-5"
+                  />
                 </div>
               </div>
               <div class="flex items-center gap-2 my-1">
                 <p class="text-[#596574] text-sm">Location rating</p>
                 <div class="flex gap-2">
-                  <img src="../../../assets/icons/star.svg" alt="" class="w-5 h-5" />
-                  <img src="../../../assets/icons/star.svg" alt="" class="w-5 h-5" />
-                  <img src="../../../assets/icons/star.svg" alt="" class="w-5 h-5" />
-                  <img src="../../../assets/icons/star.svg" alt="" class="w-5 h-5" />
-                  <img src="../../../assets/icons/star.svg" alt="" class="w-5 h-5" />
+                  <img
+                    src="../../../assets/icons/star.svg"
+                    alt=""
+                    class="w-5 h-5"
+                  />
+                  <img
+                    src="../../../assets/icons/star.svg"
+                    alt=""
+                    class="w-5 h-5"
+                  />
+                  <img
+                    src="../../../assets/icons/star.svg"
+                    alt=""
+                    class="w-5 h-5"
+                  />
+                  <img
+                    src="../../../assets/icons/star.svg"
+                    alt=""
+                    class="w-5 h-5"
+                  />
+                  <img
+                    src="../../../assets/icons/star.svg"
+                    alt=""
+                    class="w-5 h-5"
+                  />
                 </div>
               </div>
             </div>
