@@ -12,6 +12,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { DrillerLicenseListComponent } from '../../components/driller-license-list/driller-license-list.component';
 import { ILocation } from '../../types/location';
 import { FeaturedCarouselComponent } from '../../components/featured-carousel/featured-carousel.component';
+import { FilterTabComponent } from '../../components/filter-tab/filter-tab.component';
 // import { getLocationList } from '../../api/locations';
 
 @Component({
@@ -25,6 +26,7 @@ import { FeaturedCarouselComponent } from '../../components/featured-carousel/fe
     DrillerLicenseListComponent,
     CommonModule,
     RouterLink,
+    FilterTabComponent,
     MatIconModule,
     MatStepperModule,
     MatSelectModule,

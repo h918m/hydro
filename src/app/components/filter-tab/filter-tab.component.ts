@@ -21,26 +21,59 @@ import { MatIconModule } from '@angular/material/icon';
 export class FilterTabComponent {
   controls = [
     {
-      title: 'Permit & License',
+      title: 'Lorem Ipsum',
       checks: [
-        'Driller Permit',
-        'Borehole Drill Permit',
-        'Microsoft',
-        'MSI',
-        'Lenovo',
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+        'Lorem Ipsum',
       ],
     },
     {
-      title: 'Processor',
-      checks: ['Intel', 'AMD'],
+      title: 'Lorem Ipsum',
+      checks: [
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+      ],
     },
     {
-      title: 'Harddisk Type',
-      checks: ['SSD', 'HDD'],
+      title: 'Lorem Ipsum',
+      checks: [
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+      ],
     },
     {
-      title: 'Harddisk Størrelse',
-      checks: ['500 GB', '1 TB', '2 TB'],
+      title: 'Lorem Ipsum',
+      checks: [
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+      ],
+    },
+    {
+      title: 'Lorem Ipsum',
+      checks: [
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+        'Lorem Ipsum',
+      ],
     },
   ];
 }

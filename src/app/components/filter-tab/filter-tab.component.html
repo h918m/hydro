@@ -2,10 +2,15 @@
   <div>
     <mat-accordion>
       <button
-        class="font-[Adamina] pl-[5rem] rounded-t-[6.9px] text-start bg-[#63CCD3] text-white py-5 w-full"
+        class="font-[Adamina] pl-[5rem] rounded-t-[6.9px] rounded-b-xl text-start bg-[#63CCD3] text-white py-5 w-full"
       >
         Control
       </button>
+      <input
+        type="text"
+        class="my-2 border px-4 py-2 rouned-full w-full border-[#0CB9DE] placeholder:text-[#0CB9DE]"
+        placeholder="Type Here"
+      />
       <div>
         <mat-expansion-panel *ngFor="let control of controls">
           <mat-expansion-panel-header>
