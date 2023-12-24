@@ -35,8 +35,11 @@
       <p class="text-xl lg:text-2xl">153</p>
       <p class="text-base">Results Found</p>
     </div>
-    <div class="bg-white rounded-md p-4 border shadow-sm m-2 relative">
-      <div *ngIf="filterOpen === true" class="absolute top-0 left-0 h-[300px]">
+    <div class="bg-white rounded-md p-4 border shadow-sm m-2 relative" >
+      <div
+        *ngIf="filterOpen === true"
+        class="absolute top-0 left-0 bg-white z-30"
+      >
         <app-filter-tab />
       </div>
 
@@ -132,7 +135,7 @@
           </div>
         </ng-template>
       </div>
-      <div class="grid sm:hidden grid-cols-1 gap-2" (click)="closeFilter()">
+      <div class="grid sm:hidden grid-cols-1 gap-2" >
         <app-driller-license-list
           *ngFor="let choi of licenseBoxList"
           [oneChoice]="choi"
