@@ -51,6 +51,488 @@
                   [alt]="analysis.title"
                   class="h-[5rem]"
                 />
+                <div
+                  class="font-bold max-w-[8.5rem] text-center text-[20px] text-[#2190A4]"
+                >
+                  {{ analysis.title }}
+                </div>
+                <div
+                  class="absolute text-white -top-3 -right-5 rounded-full text-[28px] font-bold border-[3px] border-[#B4E8EC] bg-[#39B6CC] px-[10px]"
+                >
+                  {{ analysis.total }}
+                </div>
+              </div>
+            </div>
+            <div class="flex mt-6 gap-4">
+              <dash-sidebar />
+              <div class="w-full">
+                <div class="bg-white rounded-md p-4 grid grid-cols-2 gap-4">
+                  <!-- <app-license-box
+                    [licenseData]="licenseData.data"
+                    class="w-[50%]"
+                  /> -->
+                  <div
+                    class="bg-white p-2 shadow-sm rounded-md text-black text-left"
+                  >
+                    <p
+                      class="font-bold text-[#043924] my-2 text-4xl text-left"
+                      I
+                    >
+                      {{ licenseData.title }}
+                    </p>
+                    <div class="flex justify-between gap-3">
+                      <img
+                        [src]="licenseData.image"
+                        [alt]="licenseData.title"
+                        class="w-[50%]"
+                      />
+                      <div class="w-full">
+                        <div class="flex flex-wrap items-center gap-2">
+                          <p
+                            class="text-white px-2 bg-[#62CCD3] rounded-full text-xs p-1"
+                            *ngFor="let tag of licenseData.tags"
+                          >
+                            {{ tag }}
+                          </p>
+                        </div>
+                        <p class="font-bold text-[#043924] my-1 text-xl">
+                          {{ licenseData.activities }} BoreHole Activities
+                        </p>
+                        <p>LSWRC Compliance Grading</p>
+                        <div
+                          class="relative h-2 rounded-full bg-[#E7F4F5] w-full my-1"
+                        >
+                          <div
+                            class="absolute h-full top-0 left-0 rounded-full w-[60%] bg-[#39B6CC]"
+                          ></div>
+                        </div>
+                        <div class="flex items-center justify-between mt-5">
+                          <div class="flex items-center gap-2">
+                            <p>{{ licenseData.rating }}</p>
+                            <p>⭐️</p>
+                            <p>({{ licenseData.reviews }} reviews)</p>
+                          </div>
+                          <button
+                            class="text-white px-2 bg-[#62CCD3] rounded-full text-sm p-2"
+                          >
+                            Victoria Island
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="my-2 text-[#525967] text-[11px]">
+                      <div
+                        *ngIf="licenseData.body.length >= 350; else fullBody"
+                      >
+                        <p>{{ licenseData.body.slice(0, 50) }}</p>
+                        <a href="" class="text-gray-400">more</a>
+                      </div>
+                      <ng-template #fullBody>
+                        <p>{{ licenseData.body }}</p>
+                      </ng-template>
+                    </div>
+                  </div>
+                  <div class="w-[50%] p-3 shadow-sm">
+                    <p class="text-[#043924] text-[20px] font-bold my-2"></p>
+                    <div class="flex gap-3 h-full">
+                      <div class="h-full w-[30%]"></div>
+                      <div class="h-[150px] w-1 bg-[#148A92]"></div>
+                      <div class="flex flex-col justify-between">
+                        <div>
+                          <p class="text-[#596574] text-sm my-1">
+                            Total Renewals 6
+                          </p>
+                          <div class="flex items-center gap-2 my-1">
+                            <p class="text-[#596574] text-sm">
+                              License Expiry Date
+                            </p>
+                            <div
+                              class="px-2 bg-[#F36262] font-bold text-sm text-white rounded-full"
+                            >
+                              12th Feburary 2024
+                            </div>
+                          </div>
+                          <div class="flex items-center gap-2 my-1">
+                            <p class="text-[#596574] text-sm">
+                              Location rating
+                            </p>
+                            <div class="flex gap-2">
+                              <img src="../../../assets/star.svg" alt="" />
+                              <img src="../../../assets/star.svg" alt="" />
+                              <img src="../../../assets/star.svg" alt="" />
+                              <img src="../../../assets/star.svg" alt="" />
+                              <img src="../../../assets/star.svg" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flex justify-end w-full mb-3">
+                          <button
+                            class="bg-[#148A92] px-4 py-1 rounded-md text-white text-[13px] font-bold"
+                          >
+                            Renew License
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-2 py-4">
+                  <button
+                    class="w-full py-2 bg-[#39B6CC] border-2 border-[#E7F4F5] text-2xl font-bold text-white rounded-3xl text-center"
+                  >
+                    Renew License
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-step>
+      <mat-step [editable]="false">
+        <ng-template matStepLabel>Select Package</ng-template>
+        <div class="bg-[#E7F4F5] px-1 py-3">
+          <div
+            class="border-b-[3px] px-1 border-[#39B6CC] flex justify-between w-full pb-[9px]"
+          >
+            <div class="text-[25px] font-[AbrilFatface]">
+              LSWRC-#AJ838374-09
+            </div>
+            <div class="flex text-white items-center gap-3">
+              <button
+                class="font-medium p-2 text-[15px] bg-[#62CCD3] rounded-[9.96px]"
+              >
+                Water Analysis Complier
+              </button>
+              <button
+                class="font-medium p-2 text-[15px] bg-[#62CCD3] rounded-[9.96px]"
+              >
+                Highly Recommended
+              </button>
+              <button
+                class="font-medium p-2 text-[15px] bg-[#62CCD3] rounded-[9.96px]"
+              >
+                LSWRC Prefered
+              </button>
+            </div>
+          </div>
+          <div class="bg-white p-4">
+            <div class="flex flex-wrap gap-9">
+              <div
+                *ngFor="let analysis of analysises"
+                class="relative px-[17px] pb-1 pt-[9px] rounded-[14.99px] bg-[rgb(98,204,211,0.3)] flex items-center flex-col justify-center gap-2"
+              >
+                <!-- check if analysis.image the make <img /> or <svg-icon /> -->
+                <img
+                  [src]="analysis.src"
+                  [alt]="analysis.title"
+                  class="h-[5rem]"
+                />
+
+                <div
+                  class="font-bold max-w-[8.5rem] text-center text-[20px] text-[#2190A4]"
+                >
+                  {{ analysis.title }}
+                </div>
+                <div
+                  class="absolute text-white -top-3 -right-5 rounded-full text-[28px] font-bold border-[3px] border-[#B4E8EC] bg-[#39B6CC] px-[10px]"
+                >
+                  {{ analysis.total }}
+                </div>
+              </div>
+            </div>
+            <div class="flex mt-6 gap-4">
+              <dash-sidebar />
+              <div
+                class="[box-shadow:0px_10px_15px_-3px_rgba(0,0,0,0.1),_0px_4px_6px_-4px_rgba(0,0,0,0.1)] p-5 rounded-[8px] pb-20"
+              >
+                <div class="text-[#043924] font-bold text-[32px]">
+                  Hyrdo Engineering Service Limited
+                </div>
+                <div class="font-[OpenSans] text-[20px] font-semibold">
+                  Payment Condition
+                </div>
+                <ul class="list-disc p-[28px]">
+                  <li class="text-[#333333] text-[18px] font-[OpenSans]">
+                    Covers for Yearly Drill permit and Lagos State Operator
+                    Licens
+                  </li>
+                  <li class="text-[#333333] text-[18px] font-[OpenSans]">
+                    ,families with strollers, and visitors on crutches can buy
+                    priority tickets at the venue
+                  </li>
+                </ul>
+                <div>
+                  <div
+                    class="font-semibold font-[OpenSans] text-[#333333] text-[24px]"
+                  >
+                    Select a payment method
+                  </div>
+                  <mat-radio-group class="flex flex-col gap-4">
+                    <mat-radio-button
+                      class="rounded-[12px] w-full px-4 pt-4 pb-5 bg-[#148a9246] border-[#C8E6FF] border flex flex-col gap-5"
+                    >
+                      <div class="flex w-full justify-between items-center">
+                        <span
+                          class="text-[#333333] font-[OpenSans] font-semibold text-[18px]"
+                          >Pay with Credit Card</span
+                        >
+                        <div class="flex gap-3 items-center">
+                          <img src="../../../assets/icons/visa.svg" />
+                          <img src="../../../assets/icons/discover.svg" />
+                          <img src="../../../assets/icons/maestro.svg" />
+                          <img src="../../../assets/icons/mastercard.svg" />
+                        </div>
+                      </div>
+                      <div class="mt-5">
+                        <div class="flex gap-4">
+                          <mat-form-field appearance="outline">
+                            <mat-label>Cad number</mat-label>
+                            <input matInput placeholder="Enter card number" />
+                            <img
+                              src="../../../assets/icons/check.svg"
+                              matSuffix
+                              class="mr-3"
+                            />
+                          </mat-form-field>
+                          <mat-form-field appearance="outline">
+                            <mat-label> Expiration Date </mat-label>
+                            <input matInput placeholder="MM/YY" />
+                          </mat-form-field>
+                        </div>
+                        <div class="flex items-center gap-4">
+                          <mat-form-field appearance="outline">
+                            <mat-label> Card Security Code </mat-label>
+                            <input
+                              matInput
+                              type="password"
+                              placeholder="Enter card security code"
+                            />
+                          </mat-form-field>
+                          <div
+                            class="text-[#148A92] text-[16x] font-[OpenSans] mb-5"
+                          >
+                            What's this?
+                          </div>
+                        </div>
+                      </div>
+                    </mat-radio-button>
+                    <mat-radio-button
+                      class="rounded-[12px] px-4 pt-4 pb-5 border border-[rgb(51,51,51,0.2)]"
+                    >
+                      <div class="flex justify-between gap-2 items-center">
+                        <div class="items-center flex">
+                          <span
+                            class="text-[#333333] font-[OpenSans] font-semibold text-[18px]"
+                            >Pay with Credit Card</span
+                          >
+                          <span
+                            >You will be redirected to the PayPal website after
+                            submitting your order</span
+                          >
+                        </div>
+                        <img src="../../../assets/icons/paypal.svg" />
+                      </div>
+                    </mat-radio-button>
+                  </mat-radio-group>
+                </div>
+              </div>
+              <renew-overview />
+            </div>
+          </div>
+        </div>
+      </mat-step>
+      <mat-step [editable]="false">
+        <ng-template matStepLabel>Payment</ng-template>
+        <div class="bg-[#E7F4F5] px-1 py-3">
+          <div
+            class="border-b-[3px] px-1 border-[#39B6CC] flex justify-between w-full pb-[9px]"
+          >
+            <div class="text-[25px] font-[AbrilFatface]">
+              LSWRC-#AJ838374-09
+            </div>
+            <div class="flex text-white items-center gap-3">
+              <button
+                class="font-medium p-2 text-[15px] bg-[#62CCD3] rounded-[9.96px]"
+              >
+                Water Analysis Complier
+              </button>
+              <button
+                class="font-medium p-2 text-[15px] bg-[#62CCD3] rounded-[9.96px]"
+              >
+                Highly Recommended
+              </button>
+              <button
+                class="font-medium p-2 text-[15px] bg-[#62CCD3] rounded-[9.96px]"
+              >
+                LSWRC Prefered
+              </button>
+            </div>
+          </div>
+          <div class="bg-white p-4">
+            <div class="flex flex-wrap gap-9">
+              <div
+                *ngFor="let analysis of analysises"
+                class="relative px-[17px] pb-1 pt-[9px] rounded-[14.99px] bg-[rgb(98,204,211,0.3)] flex items-center flex-col justify-center gap-2"
+              >
+                <!-- check if analysis.image the make <img /> or <svg-icon /> -->
+                <img
+                  [src]="analysis.src"
+                  [alt]="analysis.title"
+                  class="h-[5rem]"
+                />
+
+                <div
+                  class="font-bold max-w-[8.5rem] text-center text-[20px] text-[#2190A4]"
+                >
+                  {{ analysis.title }}
+                </div>
+                <div
+                  class="absolute text-white -top-3 -right-5 rounded-full text-[28px] font-bold border-[3px] border-[#B4E8EC] bg-[#39B6CC] px-[10px]"
+                >
+                  {{ analysis.total }}
+                </div>
+              </div>
+            </div>
+            <div class="flex mt-6 gap-4">
+              <dash-sidebar />
+              <div
+                class="[box-shadow:0px_10px_15px_-3px_rgba(0,0,0,0.1),_0px_4px_6px_-4px_rgba(0,0,0,0.1)] p-5 rounded-[8px] pb-20"
+              >
+                <div class="text-[#043924] font-bold text-[32px]">
+                  Hyrdo Engineering Service Limited
+                </div>
+                <div class="font-[OpenSans] text-[20px] font-semibold">
+                  Payment Condition
+                </div>
+                <ul class="list-disc p-[28px]">
+                  <li class="text-[#333333] text-[18px] font-[OpenSans]">
+                    Covers for Yearly Drill permit and Lagos State Operator
+                    Licens
+                  </li>
+                  <li class="text-[#333333] text-[18px] font-[OpenSans]">
+                    ,families with strollers, and visitors on crutches can buy
+                    priority tickets at the venue
+                  </li>
+                </ul>
+                <div>
+                  <div
+                    class="font-semibold font-[OpenSans] text-[#333333] text-[24px]"
+                  >
+                    Select a payment method
+                  </div>
+                  <mat-radio-group class="flex flex-col gap-4">
+                    <mat-radio-button
+                      class="rounded-[12px] w-full px-4 pt-4 pb-5 bg-[#148a9246] border-[#C8E6FF] border flex flex-col gap-5"
+                    >
+                      <div class="flex w-full justify-between items-center">
+                        <span
+                          class="text-[#333333] font-[OpenSans] font-semibold text-[18px]"
+                          >Pay with Credit Card</span
+                        >
+                        <div class="flex gap-3 items-center">
+                          <img src="../../../assets/icons/visa.svg" />
+                          <img src="../../../assets/icons/discover.svg" />
+                          <img src="../../../assets/icons/maestro.svg" />
+                          <img src="../../../assets/icons/mastercard.svg" />
+                        </div>
+                      </div>
+                      <div class="mt-5">
+                        <div class="flex gap-4">
+                          <mat-form-field appearance="outline">
+                            <mat-label>Cad number</mat-label>
+                            <input matInput placeholder="Enter card number" />
+                            <img
+                              src="../../../assets/icons/check.svg"
+                              matSuffix
+                              class="mr-3"
+                            />
+                          </mat-form-field>
+                          <mat-form-field appearance="outline">
+                            <mat-label> Expiration Date </mat-label>
+                            <input matInput placeholder="MM/YY" />
+                          </mat-form-field>
+                        </div>
+                        <div class="flex items-center gap-4">
+                          <mat-form-field appearance="outline">
+                            <mat-label> Card Security Code </mat-label>
+                            <input
+                              matInput
+                              type="password"
+                              placeholder="Enter card security code"
+                            />
+                          </mat-form-field>
+                          <div
+                            class="text-[#148A92] text-[16x] font-[OpenSans] mb-5"
+                          >
+                            What's this?
+                          </div>
+                        </div>
+                      </div>
+                    </mat-radio-button>
+                    <mat-radio-button
+                      class="rounded-[12px] px-4 pt-4 pb-5 border border-[rgb(51,51,51,0.2)]"
+                    >
+                      <div class="flex justify-between gap-2 items-center">
+                        <div class="items-center flex">
+                          <span
+                            class="text-[#333333] font-[OpenSans] font-semibold text-[18px]"
+                            >Pay with Credit Card</span
+                          >
+                          <span
+                            >You will be redirected to the PayPal website after
+                            submitting your order</span
+                          >
+                        </div>
+                        <img src="../../../assets/icons/paypal.svg" />
+                      </div>
+                    </mat-radio-button>
+                  </mat-radio-group>
+                </div>
+              </div>
+              <renew-overview />
+            </div>
+          </div>
+        </div>
+      </mat-step>
+      <mat-step [editable]="false">
+        <ng-template matStepLabel>Licensed Issued</ng-template>
+        <div class="bg-[#E7F4F5] px-1 py-3">
+          <div
+            class="border-b-[3px] px-1 border-[#39B6CC] flex justify-between w-full pb-[9px]"
+          >
+            <div class="text-[25px] font-[AbrilFatface]">
+              LSWRC-#AJ838374-09
+            </div>
+            <div class="flex text-white items-center gap-3">
+              <button
+                class="font-medium p-2 text-[15px] bg-[#62CCD3] rounded-[9.96px]"
+              >
+                Water Analysis Complier
+              </button>
+              <button
+                class="font-medium p-2 text-[15px] bg-[#62CCD3] rounded-[9.96px]"
+              >
+                Highly Recommended
+              </button>
+              <button
+                class="font-medium p-2 text-[15px] bg-[#62CCD3] rounded-[9.96px]"
+              >
+                LSWRC Prefered
+              </button>
+            </div>
+          </div>
+          <div class="bg-white p-4">
+            <div class="flex flex-wrap gap-9">
+              <div
+                *ngFor="let analysis of analysises"
+                class="relative px-[17px] pb-1 pt-[9px] rounded-[14.99px] bg-[rgb(98,204,211,0.3)] flex items-center flex-col justify-center gap-2"
+              >
+                <!-- check if analysis.image the make <img /> or <svg-icon /> -->
+                <img
+                  [src]="analysis.src"
+                  [alt]="analysis.title"
+                  class="h-[5rem]"
+                />
 
                 <div
                   class="font-bold max-w-[8.5rem] text-center text-[20px] text-[#2190A4]"

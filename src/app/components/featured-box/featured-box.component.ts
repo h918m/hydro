@@ -7,14 +7,17 @@ import { RouterLink } from '@angular/router';
   selector: 'app-featured-box',
   standalone: true,
   imports: [CommonModule, RouterLink],
+  // templateUrl:'./featured-box.component.html',
   template: `
     <a [routerLink]="'/driller/fafsdfasdfasdfdsafd'">
       <div class="bg-white p-2 shadow-sm rounded-md text-black ">
-        <div class="flex justify-between items-center gap-3">
+        <div
+          class="flex flex-col lg:flex-row justify-between items-center gap-3"
+        >
           <img
             [src]="oneChoice.image"
             [alt]="oneChoice.title"
-            class="w-[50%]"
+            class="w-full lg:w-[50%]"
           />
           <div class="w-full">
             <p class=" font-bold text-[#043924] my-2 text-center">
@@ -23,46 +26,48 @@ import { RouterLink } from '@angular/router';
             <p class=" font-bold text-[#39B6CC]  text-xs my-1 text-center">
               {{ oneChoice.subtitle }}
             </p>
-            <div class="flex items-center gap-2">
-              <img src="../../../assets/images/otherTab4.png" alt="" />
-              <p class="text-[#2190A4] text-[8px] font-bold">
-                WELL WATER ANALYSIS
-              </p>
-              <div class="relative h-2 rounded-full bg-[#E7F4F5] w-[200px]">
-                <div
-                  class="absolute h-full top-0 left-0 rounded-full  w-[60%] bg-[#39B6CC]"
-                ></div>
+            <div class="grid grid-cols-2 gap-2">
+              <div class="flex items-center gap-2">
+                <img src="../../../assets/images/otherTab4.png" alt="" />
+                <p class="text-[#2190A4] text-[8px] font-bold">
+                  WELL WATER ANALYSIS
+                </p>
+                <div class="relative h-2 rounded-full bg-[#E7F4F5] w-[200px]">
+                  <div
+                    class="absolute h-full top-0 left-0 rounded-full  w-[60%] bg-[#39B6CC]"
+                  ></div>
+                </div>
               </div>
-            </div>
-            <div class="flex items-center gap-2">
-              <img src="../../../assets/images/otherTab2.png" alt="" />
-              <p class="text-[#2190A4] text-[8px] font-bold">SOIL ANALYSIS</p>
-              <div class="relative h-2 rounded-full bg-[#E7F4F5] w-[200px]">
-                <div
-                  class="absolute h-full top-0 left-0 rounded-full  w-[70%] bg-[#39B6CC]"
-                ></div>
+              <div class="flex items-center gap-2">
+                <img src="../../../assets/images/otherTab2.png" alt="" />
+                <p class="text-[#2190A4] text-[8px] font-bold">SOIL ANALYSIS</p>
+                <div class="relative h-2 rounded-full bg-[#E7F4F5] w-[200px]">
+                  <div
+                    class="absolute h-full top-0 left-0 rounded-full  w-[70%] bg-[#39B6CC]"
+                  ></div>
+                </div>
               </div>
-            </div>
-            <div class="flex items-center gap-2">
-              <img src="../../../assets/images/otherTab1.png" alt="" />
-              <p class="text-[#2190A4] text-[8px] font-bold">
-                WELL WATER QUALITY
-              </p>
-              <div class="relative h-2 rounded-full bg-[#E7F4F5] w-[200px]">
-                <div
-                  class="absolute h-full top-0 left-0 rounded-full  w-[40%] bg-[#39B6CC]"
-                ></div>
+              <div class="flex items-center gap-2">
+                <img src="../../../assets/images/otherTab1.png" alt="" />
+                <p class="text-[#2190A4] text-[8px] font-bold">
+                  WELL WATER QUALITY
+                </p>
+                <div class="relative h-2 rounded-full bg-[#E7F4F5] w-[200px]">
+                  <div
+                    class="absolute h-full top-0 left-0 rounded-full  w-[40%] bg-[#39B6CC]"
+                  ></div>
+                </div>
               </div>
-            </div>
-            <div class="flex items-center gap-2">
-              <img src="../../../assets/images/otherTab4.png" alt="" />
-              <p class="text-[#2190A4] text-[8px] font-bold">
-                WELL WATER RATING
-              </p>
-              <div class="relative h-2 rounded-full bg-[#E7F4F5] w-[200px]">
-                <div
-                  class="absolute h-full top-0 left-0 rounded-full  w-[50%] bg-[#39B6CC]"
-                ></div>
+              <div class="flex items-center gap-2">
+                <img src="../../../assets/images/otherTab4.png" alt="" />
+                <p class="text-[#2190A4] text-[8px] font-bold">
+                  WELL WATER RATING
+                </p>
+                <div class="relative h-2 rounded-full bg-[#E7F4F5] w-[200px]">
+                  <div
+                    class="absolute h-full top-0 left-0 rounded-full  w-[50%] bg-[#39B6CC]"
+                  ></div>
+                </div>
               </div>
             </div>
           </div>
